@@ -1,0 +1,49 @@
+.max-w-900 {
+    max-width: 900px; 
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; 
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem; 
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .gap-4 {
+    gap: 1rem; 
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .basis-4\5 {
+    flex-basis: 80%; 
+  }  

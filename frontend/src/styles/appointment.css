@@ -1,0 +1,51 @@
+.max-w-lg {
+    max-width: 32rem;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .table-auto {
+    width: auto;
+  }
+  
+  .bg-gray-800 {
+    background-color: #2d3748;
+  }
+  
+  .border {
+    border: 1px solid #a0aec0;
+  }
+  
+  .rounded-md {
+    border-radius: 0.375rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .text-gray-300 {
+    color: #a0aec0;
+  }
+  
+  .hover\:bg-gray-700:hover {
+    background-color: #4a5568;
+  }
+  
