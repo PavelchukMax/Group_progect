@@ -6,6 +6,5 @@ export const checkAuth = (req, res, next) => {
     next();
   } else {
     console.error('Нема сесії в запиті.');
-    next(new Error('Нема доступу. Сесія відсутня.'));
   }
 };
