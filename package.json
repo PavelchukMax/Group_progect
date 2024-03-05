@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/index.js"
+    "start": "concurrently \"node backend/index.js\" \"cd frontend && npm start\""
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,8 @@
     "jsonwebtoken": "^9.0.2",
     "sequelize": "^6.35.0",
     "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
