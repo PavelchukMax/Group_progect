@@ -22,8 +22,8 @@ const Navbar = () => {
           <>
             <NavbarLinks>
               <Link to="/">Головна</Link>
-              <Link to="/patients">Пацієнти</Link>
-              <Link to="patients/new">Додати пацієнта</Link>
+              <Link to="/books">Список книг</Link>
+              <Link to="/addAppointment">Створити замовлення</Link>
               <Link to="profile">Профіль</Link>
             </NavbarLinks>
             <LogoutButton onClick={handleLogout}>Вийти</LogoutButton>

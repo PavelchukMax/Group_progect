@@ -7,14 +7,12 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Layout from './components/Layout';
 import MainPage from './pages/MainPage';
 import ProfilePage from './pages/ProfilePage';
-import PatientsPage from './pages/PatientsPage';
-import AddPatientPage from './pages/AddPatientPage';
+import BooksPage from './pages/BooksPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
-import MedicalCard from './pages/MedicalCard';
+import BookInfo from './pages/BookInfo';
 import Appointment from './pages/Appointment';
 import AddAppointment from './pages/AddAppointment';
-import EditMedicalCard from './pages/EditMedicalCard'
 import { getMe } from './redux/authSlice'; 
 
 const GlobalStyle = createGlobalStyle`
@@ -68,10 +66,8 @@ function App() {
               <>
                     <Route path="/" element={<MainPage />} />
                     <Route path="profile" element={<ProfilePage />} />
-                    <Route path="patients" element={<PatientsPage />} />
-                    <Route path="patients/new" element={<AddPatientPage />} />
-                    <Route path="patients/:id/medicalCard" element={<MedicalCard />} />
-                    <Route path="/patients/:id/editMedicalCard" element={<EditMedicalCard />} />
+                    <Route path="books" element={<BooksPage />} />
+                    <Route path="books/:id/BookInfo" element={<BookInfo />} />
                     <Route path="appointment" element={<Appointment />} />
                     <Route path="/addAppointment" element={<AddAppointment />} />
               </>

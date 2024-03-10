@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import authReducer from './authSlice';
-import patientReducer from './patientSlice';
+import bookReducer from './bookSlice';
 import appointmentReducer from './appointmentSlice';
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  patient: patientReducer,
+  book: bookReducer,
   appointment : appointmentReducer
 });
 

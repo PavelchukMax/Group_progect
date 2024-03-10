@@ -1,35 +1,36 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../db.js';
 
-const Patients = sequelize.define('Patient', {
+const Books = sequelize.define('Book', {
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
   },
-  patientName: {
+  BookName: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  age: {
+  autor: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  Description: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  Pages: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  doctorName: {
+  Cover_image_name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-   diagnosis: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
-  instructions: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-  },
-}, {
+}, 
+{
   timestamps: false, 
 });
 
-export default Patients;
+export default Books;
