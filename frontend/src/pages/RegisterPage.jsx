@@ -63,48 +63,53 @@ const RegisterPage = () => {
   
 
   return (
-    <form onSubmit={(e) => e.preventDefault()} className="register-form">
-      <h1>Реєстрація</h1>
-      <label>
+    <div className='outer'>
+    <form onSubmit={(e) => e.preventDefault()} className="inner">
+      <h1 className='register-xl-text'>Реєстрація</h1>
+      <label className='input-outer register-text'>
         Логін:
         <input
           type="text"
           value={username}
           onChange={(e) => setUserName(e.target.value)}
           placeholder="Username"
+          className='register-input-text'
         />
       </label>
-      <label>
+      <label className='input-outer register-text'>
         Пароль:
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
+          className='register-input-text'
         />
       </label>
-      <label>
+      <label className='input-outer register-text'>
         Підтвердіть пароль:
         <input
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           placeholder="Confirm Password"
+          className='register-input-text'
         />
       </label>
       <div className="flex gap-8 justify-center mt-4">
         <button
           type="submit"
           onClick={handleSubmit}
-          className="flex justify-center items-center bg-gray-600 text-lg text-white rounded-sm py-1 px-4"
+          className="register-button"
         >
           Підтвердити
         </button>
-        <Link to="/login" className="flex justify-center items-center text-lg text-white py-1 px-4">
+        <Link to="/login" className="register-button" style={{width:200}}>
           Вже є акаунт?
         </Link>
       </div>
     </form>
+    </div>
   );
 };
 
