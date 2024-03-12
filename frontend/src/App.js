@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(to bottom, #156c5b, #0e865e);
+    background: #BFBFBF;
   }
 `;
 
