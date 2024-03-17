@@ -1,0 +1,119 @@
+openapi: 3.0.0
+info:
+  title: BiblioAPI
+  version: 1.0.0
+servers:
+  - url: http://localhost:3001
+    description: Development server
+paths:
+  /api/auth/register:
+    post:
+      summary: Реєстрация користувача
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        '200':
+          description: Успішна реєстрация
+        '400':
+          description: Помилка вхідних даних
+  /api/auth/login:
+    post:
+      summary: Авторизація користувача
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Успішна авторизація
+        '400':
+          description: Помилка вхідних даних
+        '401':
+          description: Не авторизовано
+  /api/auth/me:
+    get:
+      summary: Отримати інформацію про поточного користувача
+      responses:
+        '200':
+          description: Успішне отримання інформації про поточного користувача
+        '401':
+          description: Користувача не авторизовано
+  /api/users:
+    get:
+      summary: Отримати список усіх користувачів
+      responses:
+        '200':
+          description: Успішне отримання списку користувачів
+        '500':
+          description: Помилка серверу при отриманні списку користувачів
+  /api/users/{id}:
+    put:
+      summary: Оновити інформацію про користувача
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                password:
+                  type: string
+                newUsername:
+                  type: string
+      responses:
+        '200':
+          description: Успішне оновлення інформації про користувача
+        '400':
+          description: Помилка вхідних даних
+        '401':
+          description: Користувача не авторизовано
+        '404':
+          description: Користувача не знайдено
+  /api/book:
+    get:
+      summary: Отримати список книг
+      responses:
+        '200':
+          description: Успішне отримання списка книг
+        '500':
+          description: Помилка сервера при отриманні списка книг
+  /api/book/{id}:
+    get:
+      summary: Отримати інформацію про книгу за id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Успішне отримання інформації о книзі
+        '404':
+          description: Книгу не знайдено

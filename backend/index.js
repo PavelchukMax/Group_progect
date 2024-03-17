@@ -2,15 +2,19 @@ import express from 'express';
 import session from 'express-session';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import YAML from 'yamljs';
 import authRoute from './routes/auth.js';
 import bookRoute from './routes/books.js';
 import RentRoute from './routes/Rents.js';
 import sequelize from './db.js';
+import swaggerUi from 'swagger-ui-express';
 
 const app = express();
 dotenv.config();
 
 const PORT = process.env.PORT || 3001;
+
+const swaggerDocument = YAML.load('./backend/swagger.yaml');
 
 app.use(
   cors({
@@ -37,6 +41,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/api/rents',RentRoute)
 app.use('/api/auth', authRoute);
 app.use('/api/book', bookRoute);

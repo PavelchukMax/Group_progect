@@ -12,6 +12,7 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import BookInfo from './pages/BookInfo';
 import Appointment from './pages/Appointment';
+import DocumentationPage from './pages/DocumentationPage';
 import AddAppointment from './pages/AddAppointment';
 import { getMe } from './redux/authSlice'; 
 
@@ -64,18 +65,20 @@ function App() {
           <Routes>
             {user ? (
               <>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="profile" element={<ProfilePage />} />
-                    <Route path="books" element={<BooksPage />} />
-                    <Route path="books/:id/BookInfo" element={<BookInfo />} />
-                    <Route path="appointment" element={<Appointment />} />
-                    <Route path="/addAppointment" element={<AddAppointment />} />
+                <Route path="/" element={<MainPage />} />
+                <Route path="profile" element={<ProfilePage />} />
+                <Route path="books" element={<BooksPage />} />
+                <Route path="books/:id/BookInfo" element={<BookInfo />} />
+                <Route path="appointment" element={<Appointment />} />
+                <Route path="/addAppointment" element={<AddAppointment />} />
+                <Route path="/documentation" element={<DocumentationPage />} />
               </>
             ) : (
               <>
                 <Route path="login" element={<LoginPage />} />
                 <Route path="register" element={<RegisterPage />} />
                 <Route path="/" element={<Navigate to="/login" />} />
+                <Route path="/documentation" element={<DocumentationPage />} />
               </>
             )}
           </Routes>
