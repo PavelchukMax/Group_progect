@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate  } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../redux/authSlice';
+import '../styles/navbar.css'
 import { NavbarContainer, NavbarContent, NavbarLinks, LogoutButton } from '../styles/navbar.js';
 
 const Navbar = () => {
@@ -17,16 +18,20 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <NavbarContent style={{ display: 'flex', alignItems: 'center' }}>
+      <NavbarContent className='a'>
         {user ? (
           <>
-            <NavbarLinks>
-              <Link to="/">Головна</Link>
-              <Link to="/books">Список книг</Link>
-              <Link to="/addAppointment">Створити замовлення</Link>
-              <Link to="profile">Профіль</Link>
+            <div className="book-text">Book</div>
+            <NavbarLinks className='b'>
+              <Link className='navbar-text' to="/">Про нас</Link>
+              <Link className='navbar-text' to="/books">Замволення</Link>
+              <Link className='navbar-text' to="/addAppointment">Каталог</Link>
+              <Link className='navbar-text' to="profile">Відгуки</Link>
+              <Link className='navbar-text' to="profile">Контакти</Link>
             </NavbarLinks>
-            <LogoutButton onClick={handleLogout}>Вийти</LogoutButton>
+            <NavbarLinks className='b'>
+            <Link className='navbar-text' to="profile">Профіль</Link>
+            </NavbarLinks>
           </>
         ) : null}
       </NavbarContent>

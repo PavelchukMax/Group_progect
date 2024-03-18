@@ -96,7 +96,7 @@ const RegisterPage = () => {
           className='register-input-text'
         />
       </label>
-      <div className="flex gap-8 justify-center mt-4">
+      <div className="flex gap-8 al-center justify-center mt-4">
         <button
           type="submit"
           onClick={handleSubmit}
