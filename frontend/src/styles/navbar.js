@@ -6,16 +6,13 @@ export const NavbarContainer = styled.nav`
 
 export const NavbarContent = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
 `;
 
 export const NavbarLinks = styled.div`
   display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-direction: row; /* Добавленный стиль */
+  gap: 5rem;
+  flex-direction: column; /* Добавленный стиль */
 
   a {
     color: #fff;
@@ -44,6 +41,7 @@ export const LogoutButton = styled.button`
   border: 1px solid #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  width:80%;
 
   &:hover {
     color: #343a40;

@@ -53,7 +53,7 @@ const LoginPage = () => {
           className="rounded-lg login-input-text"
         />
       </label>
-      <div className="flex gap-8 justify-center mt-4">
+      <div className="flex al-center gap-8 justify-center mt-4">
         <button
           type="submit"
           onClick={handleSubmit}

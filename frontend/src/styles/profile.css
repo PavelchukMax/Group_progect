@@ -1,0 +1,19 @@
+.profile-container{
+    width: 450px;
+}
+
+.profile-button{
+    display: flex;
+    color: white;
+    background-color: rgb(206, 27, 27);
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.color-red:hover{
+    background-color: rgb(131, 28, 28);
+}
