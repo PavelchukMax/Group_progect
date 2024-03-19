@@ -1,7 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import '../styles/PatientItem.css';
 import React from 'react';
-
+/**
+ * Компонент для відображення інформації про книгу.
+ * @param {Object} props - Властивості компонента.
+ * @param {Object} props.book - Об'єкт, що має інформацію про книгу.
+ * @param {string} props.book.BookName - Назва книги.
+ * @param {string} props.book.autor - Автор книги.
+ * @param {string} props.book.Cover_image_name - ім'я файла обкладинки книги.
+ * @returns {JSX.Element} Елемент компонента для відображения інформації про книгу.
+ */
 const BookItem = ({ book }) => {
   const { BookName, autor, Cover_image_name} = book;
 

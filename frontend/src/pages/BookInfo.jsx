@@ -4,17 +4,30 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getBookById } from '../redux/bookSlice';
 import '../styles/medicalCard.css';
 
+/**
+ * Компонент BookInfo.
+ * @module BookInfo
+ * @returns {JSX.Element} Елемент React, що представляє інформацію про книгу.
+ */
 const BookInfo = () => {
   const { id } = useParams();
   const book = useSelector((state) => state.book?.book || state.book); 
   const dispatch = useDispatch();
-  console.log (book)
   const coverImage = book.Cover_image_name ? (
     <img
       src={`../book_covers/${book.Cover_image_name}`}
       alt={book.Cover_image_name}
       className="patient-item-image"
     />) : null
+  
+  /**
+   * Ефект, що виконує завантаження інформації про книгу з її ID при монтуванні компонента.
+   * @name useEffect
+   * @function
+   * @param {Function} dispatch - Функція для надсилання дій Redux.
+   * @param {int} id – ID книги для завантаження інформації.
+   */
+  
   useEffect(() => {
     dispatch(getBookById(id));
   }, [dispatch, id]);

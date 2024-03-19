@@ -1,0 +1,9 @@
+{
+    "source": {
+        "include": ["./frontend/src", "./frontend/src/pages", "./frontend/src/components"],
+        "exclude": ["./node_modules"]
+    },
+    "opts": {
+        "destination": "./docs"
+    }
+}

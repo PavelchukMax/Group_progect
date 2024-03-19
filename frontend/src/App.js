@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import styled, { createGlobalStyle } from 'styled-components';
-
+import {setUser} from './redux/authSlice'
 import Layout from './components/Layout';
 import MainPage from './pages/MainPage';
 import ProfilePage from './pages/ProfilePage';
@@ -42,6 +42,11 @@ const LoadingContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
+/**
+ * Компонент програми, що відображає маршрутизацію та керує глобальним станом.
+ * @module App
+ * @returns {JSX.Element} Елемент React, що представляє програму.
+ */
 
 function App() {
   const dispatch = useDispatch();
@@ -51,11 +56,19 @@ function App() {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
-      dispatch({ type: 'auth/setUser', payload: parsedUser });
+      dispatch(setUser(parsedUser));
     } else {
-      dispatch(getMe()).unwrap();
+      dispatch(getMe())
+        .unwrap()
+        .then(user => {
+          localStorage.setItem('user', JSON.stringify(user));
+        })
+        .catch(error => {
+          console.error('Error fetching user data:', error);
+        });
     }
   }, [dispatch]);
+  
 
   return (
     <>

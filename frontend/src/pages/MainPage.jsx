@@ -3,6 +3,12 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import "../styles/mainPage.css";
 
+/**
+ * Головна сторінка програми.
+ * @module MainPage
+ * @returns {JSX.Element} Елемент React, що представляє головну сторінку.
+ */
+
 const MainPage = () => {
   const { user } = useSelector((state) => state.auth);
   return (

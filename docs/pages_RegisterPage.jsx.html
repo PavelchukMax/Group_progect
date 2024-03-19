@@ -1,4 +1,32 @@
-import React, { useState, useEffect } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/RegisterPage.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/RegisterPage.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -45,19 +73,19 @@ const RegisterPage = () => {
   const handleSubmit = async () => {
     try {
       // Перевірка на валідність логіну
-      if (username.length < 8) {
+      if (username.length &lt; 8) {
         toast.error('Логін повинен містити принаймні 8 символів');
         return;
       }
       
       // Перевірка на валідність паролю
-      if (password.length < 8) {
+      if (password.length &lt; 8) {
         toast.error('Пароль повинен містити принаймні 8 символів');
         return;
       }
   
       // Перевірка наявності спеціальних символів в паролі
-      const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+      const specialCharRegex = /[!@#$%^&amp;*()_+\-=\[\]{};':"\\|,.&lt;>\/?]+/;
       if (!specialCharRegex.test(password)) {
         toast.error('Пароль повинен містити принаймні один спеціальний символ');
         return;
@@ -87,54 +115,77 @@ const RegisterPage = () => {
   
   // Відображення компонента
   return (
-    <div className='outer'>
-      <form onSubmit={(e) => e.preventDefault()} className="inner">
-        <h1 className='register-xl-text'>Реєстрація</h1>
-        <label className='input-outer register-text'>
+    &lt;div className='outer'>
+      &lt;form onSubmit={(e) => e.preventDefault()} className="inner">
+        &lt;h1 className='register-xl-text'>Реєстрація&lt;/h1>
+        &lt;label className='input-outer register-text'>
           Логін:
-          <input
+          &lt;input
             type="text"
             value={username}
             onChange={(e) => setUserName(e.target.value)}
             placeholder="Username"
             className='register-input-text'
           />
-        </label>
-        <label className='input-outer register-text'>
+        &lt;/label>
+        &lt;label className='input-outer register-text'>
           Пароль:
-          <input
+          &lt;input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             className='register-input-text'
           />
-        </label>
-        <label className='input-outer register-text'>
+        &lt;/label>
+        &lt;label className='input-outer register-text'>
           Підтвердіть пароль:
-          <input
+          &lt;input
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="Confirm Password"
             className='register-input-text'
           />
-        </label>
-        <div className="flex gap-8 al-center justify-center mt-4">
-          <button
+        &lt;/label>
+        &lt;div className="flex gap-8 al-center justify-center mt-4">
+          &lt;button
             type="submit"
             onClick={handleSubmit}
             className="register-button"
           >
             Підтвердити
-          </button>
-          <Link to="/login" className="register-button" style={{width:200}}>
+          &lt;/button>
+          &lt;Link to="/login" className="register-button" style={{width:200}}>
             Вже є акаунт?
-          </Link>
-        </div>
-      </form>
-    </div>
+          &lt;/Link>
+        &lt;/div>
+      &lt;/form>
+    &lt;/div>
   );
 };
 
 export default RegisterPage;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-App.html">App</a></li><li><a href="module-BookInfo.html">BookInfo</a></li><li><a href="module-BooksPage.html">BooksPage</a></li><li><a href="module-LoginPage.html">LoginPage</a></li><li><a href="module-MainPage.html">MainPage</a></li><li><a href="module-ProfilePage.html">ProfilePage</a></li><li><a href="module-RegisterPage.html">RegisterPage</a></li></ul><h3>Global</h3><ul><li><a href="global.html#BookItem">BookItem</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Mar 19 2024 15:04:00 GMT+0200 (Восточная Европа, стандартное время)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
