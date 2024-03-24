@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, Navigate} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import styled, { createGlobalStyle } from 'styled-components';
 import {setUser} from './redux/authSlice'
@@ -11,9 +11,9 @@ import BooksPage from './pages/BooksPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import BookInfo from './pages/BookInfo';
-import Appointment from './pages/Appointment';
-import AddAppointment from './pages/AddAppointment';
-import { getMe } from './redux/authSlice'; 
+import AllRents from './pages/Rents';
+import MyRents from './pages/MyRents';
+import AddRent from './pages/AddRent';
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -56,15 +56,6 @@ function App() {
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
       dispatch(setUser(parsedUser));
-    } else {
-      dispatch(getMe())
-        .unwrap()
-        .then(user => {
-          localStorage.setItem('user', JSON.stringify(user));
-        })
-        .catch(error => {
-          console.error('Error fetching user data:', error);
-        });
     }
   }, [dispatch]);
   
@@ -81,8 +72,10 @@ function App() {
                 <Route path="profile" element={<ProfilePage />} />
                 <Route path="books" element={<BooksPage />} />
                 <Route path="books/:id/BookInfo" element={<BookInfo />} />
-                <Route path="appointment" element={<Appointment />} />
-                <Route path="/addAppointment" element={<AddAppointment />} />
+                <Route path="AllRents" element={<AllRents />} />
+                <Route path="MyRents" element={<MyRents />} />
+                <Route path="/addRent" element={<AddRent />} />
+                <Route path="*" element={<Navigate to="/login" />} />
               </>
             ) : (
               <>

@@ -30,8 +30,8 @@ const LoginPage = () => {
    */
   
   useEffect(() => {
-    if (isAuth) {
-      navigate('/MainPage');
+    if (status === 'succeeded') {
+      navigate('/');
     }
   }, [status, isAuth, navigate]);
 

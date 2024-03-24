@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllBooks } from '../redux/bookSlice';
 import BookItem from '../components/BookItem';
-import '../styles/patientsPage.css';
+import '../styles/BooksPage.css';
 
 /**
  * Компонент, що представляє сторінку з книгами.
@@ -77,7 +77,7 @@ const BooksPage = () => {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto py-5">
+    <div className="max-w-900">
       <div className="flex justify-between gap-4">
         <div className="flex text-2xl text-white flex-col gap-5 basis-4/5">
           <div className="search-container mb-4">

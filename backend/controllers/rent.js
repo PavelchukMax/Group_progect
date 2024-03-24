@@ -1,21 +1,20 @@
-import Appointments from '../models/rents.js';
+import Rents from '../models/rents.js';
 
-export const createAppointment = async (req, res) => {
+export const createRent = async (req, res) => {
   try {
-    const { date, time, doctor, patient } = req.body;
-    await Appointments.create({ date, time, doctor, patient });
-    res.status(200).json({ message: 'Appointment created successfully' });
+    const { datestart, datefinish, User_name, book_name, User_Address, User_realname } = req.body;
+    await Rents.create({ datestart, datefinish, User_name, book_name, User_Address, User_realname, is_finished: false });
+    res.status(200).json({ message: 'Rent created successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
 };
 
-export const getAppointments = async (req, res) => {
+export const getRents = async (req, res) => {
   try {
-    const appointments = await Appointments.findAll();
-    console.log(appointments);
-    res.json({ appointments });
+    const rents = await Rents.findAll();
+    res.json({ rents });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal Server Error' });

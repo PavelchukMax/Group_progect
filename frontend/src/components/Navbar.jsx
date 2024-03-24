@@ -14,10 +14,9 @@ const Navbar = () => {
           <>
             <div className="book-text">Book</div>
             <NavbarLinks className='b'>
-              <Link className='navbar-text' to="/">Про нас</Link>
-              <Link className='navbar-text' to="/addAppointment">Замволення</Link>
+              <Link className='navbar-text' to="/">Головна</Link>
+              <Link className='navbar-text' to="/addRent">Замволення</Link>
               <Link className='navbar-text' to="/books">Каталог</Link>
-              <Link className='navbar-text' to="profile">Відгуки</Link>
               <Link className='navbar-text' to="profile">Контакти</Link>
             </NavbarLinks>
             <NavbarLinks className='b'>

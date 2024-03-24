@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import '../styles/PatientItem.css';
+import '../styles/BookItem.css';
 import React from 'react';
 /**
  * Компонент для відображення інформації про книгу.
@@ -12,10 +12,9 @@ import React from 'react';
  */
 const BookItem = ({ book }) => {
   const { BookName, autor, Cover_image_name} = book;
-
   const coverImage = Cover_image_name ? (
     <img
-      src={`../book_covers/${book.Cover_image_name}`}
+      src={`/book_covers/${book.Cover_image_name}`}
       alt={Cover_image_name}
       className="patient-item-image"
     />

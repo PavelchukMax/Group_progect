@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import authReducer from './authSlice';
 import bookReducer from './bookSlice';
-import appointmentReducer from './appointmentSlice';
+import rentReducer from './rentSlice';
 
 
 const rootReducer = combineReducers({
   auth: authReducer,
   book: bookReducer,
-  appointment : appointmentReducer
+  rent : rentReducer
 });
 
 export default rootReducer;

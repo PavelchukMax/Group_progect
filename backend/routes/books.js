@@ -5,6 +5,6 @@ import { checkAuth } from '../utils/checkAuth.js';
 const router = express.Router();
 
 router.get('/',checkAuth, getAllBooks);
-router.get('/:id',checkAuth, getBookById);   
+router.get('/:id', getBookById);   
 
 export default router;

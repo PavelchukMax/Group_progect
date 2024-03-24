@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBookById } from '../redux/bookSlice';
-import '../styles/medicalCard.css';
+import '../styles/BookInfoPage.css';
 
 /**
  * Компонент BookInfo.
@@ -15,7 +15,7 @@ const BookInfo = () => {
   const dispatch = useDispatch();
   const coverImage = book.Cover_image_name ? (
     <img
-      src={`../book_covers/${book.Cover_image_name}`}
+      src={`/book_covers/${book.Cover_image_name}`}
       alt={book.Cover_image_name}
       className="patient-item-image"
     />) : null
@@ -34,7 +34,7 @@ const BookInfo = () => {
 
   if (!book) {
     return (
-      <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+      <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden" style={{height:'80vh', overflowY: 'auto'}}>
         <div className="px-6 py-4">
           <p className="text-gray-900 font-bold mb-2"> Такої книги не існує.</p>
         </div>
@@ -42,7 +42,7 @@ const BookInfo = () => {
     );
   }
   return (
-    <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg overflow-hidden" style={{height:'80vh', overflowY: 'auto'}}>
       <div className="px-6 py-4">
         <div className="book-info">
           {coverImage}
