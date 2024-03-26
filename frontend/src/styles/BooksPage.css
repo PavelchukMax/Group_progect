@@ -47,3 +47,7 @@
   .basis-4\5 {
     flex-basis: 80%; 
   }  
+  .books-main{
+    width:calc(100vw - 270px);
+    margin-left:270px;
+  }

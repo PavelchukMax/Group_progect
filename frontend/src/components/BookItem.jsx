@@ -27,8 +27,6 @@ const BookItem = ({ book }) => {
         </div>
         <div className='patient-info'>{BookName}</div>
         <div className='patient-info'>автор: {autor}</div>
-      </div>
-      <div className="buttons-container">
         <NavLink to={`/books/${book.id}/BookInfo`} className='button button-medical-card'>
           Детальніше
         </NavLink>
