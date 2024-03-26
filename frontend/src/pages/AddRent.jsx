@@ -81,11 +81,11 @@ const AddRent = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
-        <h2 className="text-2xl font-bold mb-6">Створення аренди</h2>
-        <div className="mb-4">
-          <label htmlFor="datestart" className="block text-gray-700 font-bold mb-2">
+    <div className="outer">
+      <form className="inner rent-form" onSubmit={handleSubmit}>
+        <h2 className="register-xl-text">Створення аренди</h2>
+        <div className="mb-4 rent-field">
+          <label htmlFor="datestart" className="block register-text">
             Дата початку аренди
           </label>
           <input
@@ -94,11 +94,11 @@ const AddRent = () => {
             name="datestart"
             value={datestart}
             onChange={(e) => setDateStart(e.target.value)}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="field register-input-text"
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="duration" className="block text-gray-700 font-bold mb-2">
+        <div className="mb-4 rent-field">
+          <label htmlFor="duration" className="block register-text">
             Тривалість оренди
           </label>
           <select
@@ -106,15 +106,15 @@ const AddRent = () => {
             name="duration"
             value={duration}
             onChange={handleDurationChange}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="field register-input-text"
           >
             <option value="3">3 дні</option>
             <option value="7">1 тиждень</option>
             <option value="14">2 тижня</option>
           </select>
         </div>
-        <div className="mb-4">
-          <label htmlFor="book" className="block text-gray-700 font-bold mb-2">
+        <div className="mb-4 rent-field">
+          <label htmlFor="book" className="block register-text">
             Книга
           </label>
           <select
@@ -122,7 +122,7 @@ const AddRent = () => {
             name="book"
             value={selectedBook}
             onChange={(e) => setSelectedBook(e.target.value)}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="field register-input-text"
           >
             <option value="" disabled>
               Виберіть книгу
@@ -134,8 +134,8 @@ const AddRent = () => {
             ))}
           </select>
         </div>
-        <div className="mb-4">
-          <label htmlFor="deliveryType" className="block text-gray-700 font-bold mb-2">
+        <div className="mb-4 rent-field">
+          <label htmlFor="deliveryType" className="block register-text">
             Тип доставки
           </label>
           <select
@@ -143,7 +143,7 @@ const AddRent = () => {
             name="deliveryType"
             value={deliveryType}
             onChange={handleDeliveryChange}
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="field register-input-text"
           >
             <option value="library">Забрати самому з бібліотеки</option>
             <option value="delivery">Доставка</option>
@@ -151,8 +151,8 @@ const AddRent = () => {
         </div>
         {deliveryType === 'delivery' && (
           <>
-            <div className="mb-4">
-              <label htmlFor="userRealname" className="block text-gray-700 font-bold mb-2">
+            <div className="mb-4 rent-field">
+              <label htmlFor="userRealname" className="block register-text">
                 Реальне ім'я
               </label>
               <input
@@ -161,11 +161,11 @@ const AddRent = () => {
                 name="userRealname"
                 value={userRealname}
                 onChange={(e) => setUserRealname(e.target.value)}
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="field register-input-text"
               />
             </div>
-            <div className="mb-4">
-              <label htmlFor="userAddress" className="block text-gray-700 font-bold mb-2">
+            <div className="mb-4 rent-field">
+              <label htmlFor="userAddress" className="block register-text">
                 Адреса доставки
               </label>
               <input
@@ -174,7 +174,7 @@ const AddRent = () => {
                 name="userAddress"
                 value={userAddress}
                 onChange={(e) => setUserAddress(e.target.value)}
-                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="field register-input-text"
               />
             </div>
           </>
@@ -182,7 +182,7 @@ const AddRent = () => {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="register-button"
           >
             арендувати
           </button>
