@@ -192,3 +192,19 @@
   .register-button:hover{
     background-color: #b3854d;
   }
+  select {
+      margin-top: 0.25rem;
+      padding: 0.5rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 0.25rem;
+      outline: none;
+      font-size: 0.875rem;
+  }
+  .rent-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .field{
+    width: 280px;
+  }

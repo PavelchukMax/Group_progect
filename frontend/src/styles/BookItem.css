@@ -4,6 +4,7 @@
     flex: 1;
     margin: 10px;
     width: 100%; 
+    height: 600px;
 }
 
 .patient-item-header {
@@ -39,4 +40,6 @@
 .button-medical-card {
     background-color: #008000; 
 }
-
+.book-Cover-image-container{
+    width: 300px;
+}
