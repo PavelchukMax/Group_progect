@@ -13,15 +13,17 @@ const MainPage = () => {
   const { user } = useSelector((state) => state.auth);
   return (
     <div className="main-page-container">
-      <p>Ласкаво просимо, {user.username}!</p>
-      <div className="mx-auto max-w-2xl text-center">
-      <NavLink to="/AllRents" className="block">
-      <button className="bg-blue-500 hover:bg-blue-700 text-lg text-white py-2 px-4 rounded mx-auto">
+      <div className='main-page-text'>
+        Ласкаво просимо, <div className='bold main-page-text'>{user.username}!</div>
+        </div>
+      <div className="main-page-button-container">
+      <NavLink to="/AllRents" className="main-page-link">
+      <button className="main-page-button">
       Усі активні аренди
       </button>
      </NavLink>
-     <NavLink to="/MyRents" className="block">
-      <button className="bg-blue-500 hover:bg-blue-700 text-lg text-white py-2 px-4 rounded mx-auto">
+     <NavLink to="/MyRents" className="main-page-link">
+      <button className="main-page-button">
       Мої аренди
       </button>
      </NavLink>

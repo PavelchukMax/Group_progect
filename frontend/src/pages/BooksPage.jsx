@@ -89,7 +89,7 @@ const BooksPage = () => {
               value={searchTerm}
             />
           </div>
-          <div className="books-list" style={{ display:'flex',flexDirection:'row',flexWrap:"wrap", maxHeight: 'calc(100vh - 200px)', overflowY: 'auto' }}>
+          <div className="books-list" style={{ display:'flex',flexDirection:'row',flexWrap:"wrap", maxHeight: 'calc(100vh - 155px)', overflowY: 'auto' }}>
             {filteredBooks.length > 0 ? (
               filteredBooks.map((book, idx) => (
                 <BookItem key={idx} book={book} />

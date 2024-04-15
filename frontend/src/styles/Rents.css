@@ -1,12 +1,12 @@
-.max-w-lg {
-    max-width: 32rem;
-  }
+
   
   .mx-auto {
     margin-left: auto;
     margin-right: auto;
   }
-  
+  .rent-container {
+    margin-left: 12vw;
+  }
   .text-white {
     color: #fff;
   }
@@ -15,12 +15,12 @@
     width: auto;
   }
   
-  .bg-gray-800 {
-    background-color: #2d3748;
+  .bg-gray {
+    background-color: #A8A5A5;
   }
   
-  .border {
-    border: 1px solid #a0aec0;
+  .rent-border {
+    border: 1px solid #1f2020;
   }
   
   .rounded-md {
@@ -41,11 +41,13 @@
     text-align: left;
   }
   
-  .text-gray-300 {
-    color: #a0aec0;
+  .text-gray {
+    color: rgb(0, 0, 0);
   }
   
-  .hover\:bg-gray-700:hover {
-    background-color: #4a5568;
+  .hover\:bg-gray:hover {
+    background-color: #818080;
   }
-  
+  .font-l{
+    font-size: 25px;
+  }

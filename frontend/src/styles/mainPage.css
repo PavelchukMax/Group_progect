@@ -70,3 +70,37 @@ button {
 .green-button:hover {
   background-color: #2f855a;
 }
+.main-page-text {
+  font-size: 30px;
+  flex-direction: row;
+  margin-left: 6px;
+}
+.main-page-button-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.main-page-button {
+  display: flex;
+  color: black;
+  background-color: #E1A762;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.main-page-button:hover   {
+  background-color: #b3854d;
+}
+
+.main-page-link {
+  text-decoration: none;
+}
+.main-page-container {
+  margin-top: 34vh;
+  margin-left: 10vw;
+}

@@ -2,21 +2,22 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    margin: 10px;
+    margin: 0px 10px;
     width: 100%; 
-    height: 600px;
+    height: 630px;
 }
 
 .patient-item-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    margin-bottom: 0rem;
 }
 
 .patient-info {
     color: white;
     font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .buttons-container {
@@ -42,4 +43,7 @@
 }
 .book-Cover-image-container{
     width: 300px;
+    margin-bottom: 0rem;
+    display: flex;
+    height: 490px;
 }
