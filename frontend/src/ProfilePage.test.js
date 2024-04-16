@@ -2,23 +2,28 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import '@testing-library/jest-dom';
 import ProfilePage from './pages/ProfilePage';
+import { BrowserRouter as Router } from 'react-router-dom'; 
+import '@testing-library/jest-dom/extend-expect'; // Add this line
 
 jest.mock('axios', () => ({
-    post: jest.fn()
-  }));
+  post: jest.fn()
+}));
 
 describe('ProfilePage component', () => {
-  it('should render input fields for "Логін", "Адрес" and "Пароль"', () => {
+  beforeEach(() => {
     render(
       <Provider store={store}>
-        <ProfilePage />
+        <Router> 
+          <ProfilePage />
+        </Router>
       </Provider>
     );
+  });
 
-    const usernameInput = screen.getByLabelText('Логин:');
-    const addressInput = screen.getByLabelText('Адрес:');
+  it('should render input fields for "Логін", "Адреса" and "Пароль"', () => {
+    const usernameInput = screen.getByLabelText('Логін:');
+    const addressInput = screen.getByLabelText('Адреса:');
     const passwordInput = screen.getByLabelText('Пароль:');
 
     expect(usernameInput).toBeInTheDocument();
@@ -27,14 +32,8 @@ describe('ProfilePage component', () => {
   });
 
   it('should update state when input fields are changed', () => {
-    render(
-      <Provider store={store}>
-        <ProfilePage />
-      </Provider>
-    );
-
-    const usernameInput = screen.getByLabelText('Логин:');
-    const addressInput = screen.getByLabelText('Адрес:');
+    const usernameInput = screen.getByLabelText('Логін:');
+    const addressInput = screen.getByLabelText('Адреса:');
     const passwordInput = screen.getByLabelText('Пароль:');
 
     fireEvent.change(usernameInput, { target: { value: 'testUsername' } });
@@ -47,13 +46,7 @@ describe('ProfilePage component', () => {
   });
 
   it('should submit form with updated data', () => {
-    render(
-      <Provider store={store}>
-        <ProfilePage />
-      </Provider>
-    );
-
-    const submitButton = screen.getByText('Сохранить');
+    const submitButton = screen.getByText('Зберегти');
     fireEvent.click(submitButton);
   });
 });
