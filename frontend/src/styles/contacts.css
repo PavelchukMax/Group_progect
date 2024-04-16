@@ -1,0 +1,32 @@
+.man{
+    width: 3.5vw;
+    height: 3vw;
+    
+}
+.teamText1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2vw;
+    margin-bottom: 1rem;
+}
+.a2{
+    padding-top: 10px;
+    width: 3vw;
+}
+.contacts-container {
+    width: 1200px;
+}
+.contact-text-header {
+    font-size: 3vw;
+}
+.contact-text {
+    font-size: 1.8vw;
+}
+.contacts-main-container {
+    display: flex;
+    flex-direction: row;
+}
+.contact-text2 {
+    font-size: 1.4vw;
+}
