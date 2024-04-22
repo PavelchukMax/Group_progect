@@ -1,0 +1,9 @@
+.myrent-top{
+    width: 100%;
+}
+.myrent-top-inner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+}

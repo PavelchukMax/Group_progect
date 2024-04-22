@@ -17,7 +17,7 @@ const Navbar = () => {
               <Link className='navbar-text' to="/">Головна</Link>
               <Link className='navbar-text' to="/addRent">Замволення</Link>
               <Link className='navbar-text' to="/books">Каталог</Link>
-              <Link className='navbar-text' to="profile">Контакти</Link>
+              <Link className='navbar-text' to="contacts">Контакти</Link>
             </NavbarLinks>
             <NavbarLinks className='b'>
             <Link className='navbar-text' to="profile">Профіль</Link>

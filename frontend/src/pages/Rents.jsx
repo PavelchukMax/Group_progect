@@ -23,24 +23,24 @@ const Rents = () => {
 
   
     return (
-      <div className="max-w-lg mx-auto text-white">
+      <div className="rent-container text-black">
       {activeRents && activeRents.length > 0 ? (
-         <table className="table-auto w-full bg-gray-800 border rounded-md">
+         <table className="mx-auto table-auto w-full bg-gray rent-border rounded-md">
              <thead>
                  <tr>
-                     <th className="px-4 py-2 text-left text-gray-300">Користувач</th>
-                     <th className="px-4 py-2 text-left text-gray-300">Дата початку</th>
-                     <th className="px-4 py-2 text-left text-gray-300">Дата завершення</th>
-                     <th className="px-4 py-2 text-left text-gray-300">Назва книги</th>
+                     <th className="px-4 py-2 text-left font-l text-black">Користувач</th>
+                     <th className="px-4 py-2 text-left font-l text-black">Дата початку</th>
+                     <th className="px-4 py-2 text-left font-l text-black">Дата завершення</th>
+                     <th className="px-4 py-2 text-left font-l text-black">Назва книги</th>
                  </tr>
              </thead>
              <tbody>
                  {activeRents.map((rent) => (
-                     <tr key={rent.id} className="hover:bg-gray-700">
-                         <td className="border px-4 py-2">{rent.User_name}</td>
-                         <td className="border px-4 py-2">{rent.datestart}</td>
-                         <td className="border px-4 py-2">{rent.datefinish}</td>
-                         <td className="border px-4 py-2">{rent.book_name}</td>
+                     <tr key={rent.id} className="hover:bg-gray">
+                         <td className="rent-border font-l px-4 py-2">{rent.User_name}</td>
+                         <td className="rent-border font-l px-4 py-2">{rent.datestart}</td>
+                         <td className="rent-border font-l px-4 py-2">{rent.datefinish}</td>
+                         <td className="rent-border font-l px-4 py-2">{rent.book_name}</td>
                      </tr>
                  ))}
              </tbody>

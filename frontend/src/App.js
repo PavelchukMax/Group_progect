@@ -14,6 +14,8 @@ import BookInfo from './pages/BookInfo';
 import AllRents from './pages/Rents';
 import MyRents from './pages/MyRents';
 import AddRent from './pages/AddRent';
+import Contacts from './pages/Contacts';
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -75,6 +77,7 @@ function App() {
                 <Route path="AllRents" element={<AllRents />} />
                 <Route path="MyRents" element={<MyRents />} />
                 <Route path="/addRent" element={<AddRent />} />
+                <Route path="contacts" element={<Contacts/>} />
                 <Route path="*" element={<Navigate to="/login" />} />
               </>
             ) : (
