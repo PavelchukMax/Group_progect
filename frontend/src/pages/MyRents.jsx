@@ -13,13 +13,14 @@ const MyRents = () => {
         dispatch(getRents());
     }, [dispatch]);
 
-    const filteredRents = rents.filter(rent => {
+    const filteredRents = rents ? rents.filter(rent => {
         if (showCurrent) {
             return rent.User_name === user.username && !rent.is_finished;
         } else {
             return rent.User_name === user.username;
         }
-    });
+    }) : [];
+    
 
     return (
         <div className="mx-auto font-l rent-container text-black">

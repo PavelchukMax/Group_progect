@@ -15,7 +15,8 @@ import AllRents from './pages/Rents';
 import MyRents from './pages/MyRents';
 import AddRent from './pages/AddRent';
 import Contacts from './pages/Contacts';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { GoogleMap, LoadScript } from '@googlemaps/react-wrapper';
+
 
 const GlobalStyle = createGlobalStyle`
   body, html {
