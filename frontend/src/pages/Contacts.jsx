@@ -1,6 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import emailLogo from "../images/gmail.png";
 import instagramLogo from "../images/Instagram.png";
 import phoneLogo from "../images/Phone.png";
@@ -13,10 +11,11 @@ const Contacts = () => {
         Контакти
         </div>
         <div className='contact-text'>
-            Зв'яжіться з нами<br/>
+            Зв'яжіться з нами та приходьте до нас<br/>
             Ми завжди відкриті до співпраці та готові відповісти на будь-які ваші запитання. 
             Якщо у вас є ідеї, пропозиції або запити про наші послуги, будь ласка, зв'яжіться з нами за допомогою наведених нижче контактних даних.
             Наша команда з радістю допоможе вам у вирішенні будь-яких питань.
+            Ви можете завітати до нас за цією адресою. Ми працюємо з 9:00 до 17:00 в усі дні крім неділі.
         </div>
         <div className='contacts-main-container'>
         <div>
