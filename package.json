@@ -23,6 +23,7 @@
     "google-maps-react": "^2.0.6",
     "jsonwebtoken": "^9.0.2",
     "react-google-maps": "^9.4.5",
+    "react-responsive-carousel": "^3.2.23",
     "sequelize": "^6.35.0",
     "sqlite3": "^5.1.6",
     "stream-browserify": "^3.0.0",
